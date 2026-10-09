@@ -1,0 +1,22 @@
+# Fragmento para ~/.hermes/config.yaml (Hermes crea ese archivo la primera vez
+# que corres `hermes`; copia aquí solo las secciones que quieras cambiar).
+# Referencia: https://hermes-agent.nousresearch.com/docs/user-guide/features/voice-mode
+
+# Escuchar tus audios de WhatsApp
+stt:
+  enabled: true
+  provider: local          # faster-whisper en tu máquina, sin llave
+  local:
+    model: base            # "small" entiende mejor el español pero es más lento
+    language: es
+
+# Contestarte con voz
+tts:
+  provider: edge           # gratis, sin llave
+  edge:
+    voice: es-MX-DaliaNeural   # o es-MX-JorgeNeural
+  # Para voz premium (requiere ELEVENLABS_API_KEY en .env):
+  # provider: elevenlabs
+  # elevenlabs:
+  #   voice_id: ""
+  #   model_id: eleven_multilingual_v2
